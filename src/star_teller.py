@@ -2,7 +2,7 @@ from datetime import datetime
 
 def star_sign(year: str, month: str, day: str) -> str:
     date_str = f"{year}{month}{day}"
-    print(f"Date string: {date_str}")
+
     # See whether the date entered is valid
     try:
         date = datetime.strptime(date_str, "%Y%m%d")
