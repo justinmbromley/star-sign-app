@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Star Sign
+Exec=/usr/bin/star-sign
+Icon=/usr/share/icons/star.png
+Type=Application
+Categories=Entertainment;
