@@ -1,6 +1,6 @@
 import pytest
 
-from  import star_teller.core.star_sign import star_sign
+from src.star_teller.core.star_sign import star_sign
 
 class TestStarTeller:
     def test_star_sign_working(self):
