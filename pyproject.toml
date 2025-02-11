@@ -1,0 +1,25 @@
+[project]
+name = "star-sign-app"
+version = "0.1.0"
+description = "Gets the star sign that is associated with a date"
+authors = [
+    {name = "Justin Bromley",email = "justinmbromley@gmail.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = "3.9.21"
+dependencies = [
+    "pytest (>=8.3.4,<9.0.0)",
+    "pyqt6-tools (>=6.4.2.3.3,<7.0.0.0.0)"
+]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poe.tasks]
+run_app = "python3 src/app.py"
+test = "pytest"
