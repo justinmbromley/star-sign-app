@@ -2,11 +2,11 @@
 
 
 a = Analysis(
-    ['main.py'],
+    ['src/star_teller/app.py'],
     pathex=[],
     binaries=[],
-    datas=[('resources/star.png', 'resources'), ('ui/star_sign.ui', 'ui'), ('src/star_teller.py', 'src')],
-    hiddenimports=['PyQt6'],
+    datas=[('src/star_teller/ui/star_teller.ui', 'ui')],
+    hiddenimports=[],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
@@ -22,7 +22,7 @@ exe = EXE(
     a.binaries,
     a.datas,
     [],
-    name='star_teller',
+    name='app',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,

@@ -1,6 +1,6 @@
-import pytest
 
 from src.star_teller.core.star_sign import star_sign
+
 
 class TestStarTeller:
     def test_star_sign_working(self):
@@ -18,4 +18,4 @@ class TestStarTeller:
         assert star_sign("2024", "3", "10") == "Pisces"
 
     def test_star_sign_working_fail(self):
-        assert star_sign("234", "43", "345") ==  "Invalid date entered"
+        assert star_sign("234", "43", "345") == "Invalid date entered"
