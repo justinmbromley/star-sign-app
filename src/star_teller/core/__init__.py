@@ -1,1 +1,1 @@
-__all__ = ['star_sign']
+__all__ = ["star_sign"]

@@ -1,5 +1,5 @@
 [project]
-name = "star-sign-app"
+name = "star-teller"
 version = "0.1.0"
 description = "Gets the star sign that is associated with a date"
 authors = [
@@ -7,19 +7,32 @@ authors = [
 ]
 license = {text = "MIT"}
 readme = "README.md"
-requires-python = "3.9.21"
+requires-python = ">=3.9, <3.10"
 dependencies = [
-    "pytest (>=8.3.4,<9.0.0)",
-    "pyqt6-tools (>=6.4.2.3.3,<7.0.0.0.0)"
+    "pyqt6-tools (>=6.4.2.3.3,<7.0.0.0.0)",
 ]
 
 [tool.poetry]
 package-mode = false
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.4"
+
+
+[tool.poetry.group.dev.dependencies]
+pyinstaller = "^6.12.0"
+
+
+[tool.poetry.group.linter.dependencies]
+ruff = "^0.9.6"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poe.tasks]
-run_app = "python3 src/app.py"
+run_app = "python3 src/star_teller/app.py"
 test = "pytest"
+install = "pyinstaller --onefile --windowed --add-data=\"src/ui/star_teller.ui:src/ui\" src/app.py"
+lint = "ruff check"
+format = "ruff format"

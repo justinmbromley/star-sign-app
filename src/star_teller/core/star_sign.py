@@ -1,5 +1,6 @@
 from datetime import datetime
 
+
 def star_sign(year: str, month: str, day: str) -> str:
     date_str = f"{year}{month}{day}"
 
@@ -7,7 +8,7 @@ def star_sign(year: str, month: str, day: str) -> str:
     try:
         date = datetime.strptime(date_str, "%Y%m%d")
 
-    except:
+    except ValueError:
         return "Invalid date entered"
 
     # Covering all star signs
@@ -29,7 +30,9 @@ def star_sign(year: str, month: str, day: str) -> str:
         return "Scorpio"
     elif datetime(date.year, 11, 22) <= date <= datetime(date.year, 12, 21):
         return "Sagittarius"
-    elif datetime(date.year, 12, 22) <= date <= datetime(date.year, 12, 31) or datetime(date.year, 1, 1) <= date <= datetime(date.year, 1, 19):
+    elif datetime(date.year, 12, 22) <= date <= datetime(date.year, 12, 31) or datetime(
+        date.year, 1, 1
+    ) <= date <= datetime(date.year, 1, 19):
         return "Capricorn"
     elif datetime(date.year, 1, 20) <= date <= datetime(date.year, 2, 18):
         return "Aquarius"
